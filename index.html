@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="master.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head>
+  <body>
+
+    <div class="leftside">
+      <h1 class="line1" style="color:black">Art By <br><span class="line2" style="color:black">BryanD.</span></h1>
+      <p style="color:black">Windows 10 Calculator clone</p>
+    </div>
+
+
+    <div class="box" name ="box">
+      <input type="text" class="screen0">
+      <input type="text" class="screen" value="0">
+
+      <table>
+        <tr class="one">
+          <td><button>MC</button></td>
+          <td><button>MR</button></td>
+          <td><button>M+</button></td>
+          <td><button>M-</button></td>
+          <td><button>MS</button></td>
+          <td><button>M</button></td>
+        </tr>
+      </table>
+
+      <table>
+        <tr class="two">
+          <td><button value="%" onclick="dis('%')" name="%" >%</button></td>
+          <td><button name="">CE</button  name=""></td>
+          <td><button onclick="clr()">C</button></td>
+          <td><button name=""><</button></td>
+        </tr>
+      </table>
+
+      <table>
+        <tr class="three">
+          <td><button>!</button></td>
+          <td><button>!</button></td>
+          <td><button>!</button></td>
+          <td><button value="/" onclick="dis('/')">/</button></td>
+        </tr>
+      </table>
+
+      <table>
+        <tr class="four">
+          <td><button value="7" onclick="dis('7')">7</button></td>
+          <td><button value="8" onclick="dis('8')">8</button></td>
+          <td><button value="9" onclick="dis('9')">9</button></td>
+          <td><button value="x" onclick="dis('*')">x</button></td>
+        </tr>
+      </table>
+
+      <table>
+        <tr class="five">
+          <td><button value="4" onclick="dis('4')">4</button></td>
+          <td><button value="5" onclick="dis('5')">5</button></td>
+          <td><button value="6" onclick="dis('6')">6</button></td>
+          <td><button value="-" onclick="dis('-')">-</button></td>
+        </tr>
+      </table>
+
+      <table>
+        <tr class="six">
+          <td><button value="1" onclick="dis('1')">1</button></td>
+          <td><button value="2" onclick="dis('2')">2</button></td>
+          <td><button value="3" onclick="dis('3')">3</button></td>
+          <td><button value="+" onclick="dis('+')">+</button></td>
+        </tr>
+      </table>
+
+      <table>
+        <tr class="seven">
+          <td><button >+/-</button></td>
+          <td><button value="0" onclick="dis('0')">0</button></td>
+          <td><button value="." onclick="dis('.')">.</button></td>
+          <td><button onclick="solveIt()" class="blue">=</button></td>
+        </tr>
+      </table>
+    </div>
+
+    <a  href="../projecten.html" id="terug">Terug</a>
+
+
+<script>
+  function dis(val){
+    document.querySelector(".screen0").value += val;
+  }
+
+  function solveIt(){
+    let x = document.querySelector(".screen0").value;
+    let y = eval(x);
+
+    document.querySelector(".screen").value = y;
+  }
+
+  function clr(){
+    document.querySelector(".screen0").value = "";
+    document.querySelector(".screen").value = 0;
+  }
+  
+
+
+</script>
+
+  </body>
+</html>
